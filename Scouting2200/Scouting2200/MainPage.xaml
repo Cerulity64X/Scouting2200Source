@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cust="clr-namespace:Scouting2200"
+             x:Class="Scouting2200.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="Red" Padding="24" CornerRadius="0" x:Name="TitleFrame">
+            <Label Text="Scouting" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" x:Name="TitleText"/>
+        </Frame>
+        <Grid HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <!--Label Text="Is Red" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" FontSize="20" Grid.Row="0" Grid.Column="0" x:Name="StatLabel"/>
+            <CheckBox Grid.Row="0" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand" Grid.Column="1" x:Name="IsRed" CheckedChanged="TeamChanged" IsChecked="True"/-->
+            <RadioButton Content="Blue" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" CheckedChanged="MakeBlue"/>
+            <RadioButton Content="Red" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" CheckedChanged="MakeRed" IsChecked="True"/>
+        </Grid>
+        <StackLayout x:Name="MainLayout" Padding="10, 0">
+            <Button Text="Generate QR Code" Clicked="GenerateQR"/>
+            <ScrollView x:Name="Stats">
+                <ScrollView.Content>
+                    <StackLayout x:Name="StatStack">
+                        <cust:NumericStatEntry StatName="Team Number" Description="The number of the team currently being scouted." x:Name="TeamNum"/>
+                    </StackLayout>
+                </ScrollView.Content>
+            </ScrollView>
+            <Button Text="Clear Stats" Clicked="ClearStats"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

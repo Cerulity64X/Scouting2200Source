@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Scouting2200.NumericRadioStatEntry">
+    <ContentView.Content>
+        <StackLayout x:Name="Layout" RadioButtonGroup.GroupName="RadioButtons">
+            <Grid>
+                <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Describe"/>
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <Grid x:Name="RadioGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition x:Name="LabelCol"/>
+                        <ColumnDefinition x:Name="EntryCol"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

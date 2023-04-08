@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Scouting2200.QrView">
+    <ContentPage.Content>
+        <StackLayout x:Name="MainLayout">
+            <Label Text="Team Number"
+                VerticalOptions="EndAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                x:Name="TeamNum"
+                FontSize="75"/>
+            <!--Button Text="Return" Clicked="GoBack"/-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

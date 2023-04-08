@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Scouting2200.TextStatEntry">
+    <ContentView.Content>
+        <StackLayout Orientation="Horizontal">
+
+            <Grid HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition x:Name="LabelCol"/>
+                    <RowDefinition x:Name="EntryCol"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <!--BoxView Grid.Row="0" Grid.Column="0" Color="Red"/>
+                <BoxView Grid.Row="0" Grid.Column="1" Color="Orange"/-->
+
+                <Entry Placeholder="{Binding StatName}" Grid.Row="1" Grid.Column="0" x:Name="StatEntryField" TextChanged="Changed"/>
+                
+                <Label Text="{Binding StatName}" VerticalOptions="Center" FontSize="20" Grid.Row="0" Grid.Column="0" x:Name="StatLabel"/>
+                <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Describe"/>
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
